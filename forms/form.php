@@ -7,9 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="" onsubmit="event.preventDefault(); validate();" enctype="multipart/form-data">
+    <form action="send_data.php" method="POST" onsubmit="validate();" enctype="multipart/form-data">
         <fieldset>
             <legend>Registration Form</legend>
+            <div>
+                <label for="enroll">11 Digit Enroll Number</label>
+                <input type="text" id="enroll" name="enroll">
+            </div>
             <div>
                 <label for="firstName">First Name</label>
                 <input type="text" id="firstName" name="firstName">
@@ -20,7 +24,7 @@
             </div>
             <div>
                 <label for="email">Email</label>
-                <input type="email" id="email">
+                <input type="email" id="email" name="email">
             </div>
             <div>
                 <label for="codeWord">Code Word</label>

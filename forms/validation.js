@@ -1,4 +1,17 @@
 function validate(){
+    //    Check Enrollment Number
+    var enroll = document.getElementById("enroll").value;
+    if(enroll.length !=0 ){
+        if(enroll.length < 11 || enroll.length > 11){
+            alert("Enroll number should consist of 11 digits!");
+            return false;
+         }
+
+    }else{
+        alert("Enroll Field Cannot be empty!");
+        return false;
+    }
+
     // Verifying First Name
     var fName = document.getElementById("firstName").value;
     if(fName.length != 0){

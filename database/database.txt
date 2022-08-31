@@ -1,0 +1,27 @@
+SQL Query For First Table named students:
+
+CREATE TABLE `iwt`.`students` (
+`enroll` INT(11) NOT NULL AUTO_INCREMENT ,
+ `first_name` VARCHAR(255) NOT NULL ,
+ `last_name` VARCHAR(255) NOT NULL , 
+`email` VARCHAR(255) NOT NULL ,
+ `password` VARCHAR(255) NOT NULL ,
+ `branch` VARCHAR(255) NOT NULL ,
+ `gender` VARCHAR(255) NOT NULL , 
+`photo` VARCHAR(255) NOT NULL ,
+ PRIMARY KEY (`enroll`)) ENGINE = InnoDB;
+
+
+
+SQL Query For Second Table named subjects:
+
+CREATE TABLE subjects (
+    enroll bigint NOT NULL,
+    subject1 varchar(255),
+    subject2 varchar(255),
+    subject3 varchar(255),
+    subject4 varchar(255),
+    subject5 varchar(255),
+    PRIMARY KEY (enroll),
+    FOREIGN KEY (enroll) REFERENCES students(enroll)
+);
